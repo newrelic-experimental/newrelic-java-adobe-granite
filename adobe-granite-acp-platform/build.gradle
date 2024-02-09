@@ -5,12 +5,18 @@ apply plugin: 'java'
 
 dependencies {
    implementation 'com.adobe.granite:com.adobe.granite.acp.platform:0.4.40'
+   implementation 'com.adobe.granite.bundles:json:20230618_2'
+   implementation 'javax.servlet:javax.servlet-api:3.1.0'
+   implementation 'org.apache.sling:org.apache.sling.api:2.27.2'
+   implementation 'org.apache.sling:org.apache.sling.jcr.jcr-wrapper:2.0.0'
 
    // New Relic Java Agent dependencies
    implementation 'com.newrelic.agent.java:newrelic-agent:6.4.0'
    implementation 'com.newrelic.agent.java:newrelic-api:6.4.0'
    implementation fileTree(include: ['*.jar'], dir: '../libs')
    implementation fileTree(include: ['*.jar'], dir: '../test-lib')
+   implementation fileTree(include: ['*.jar'], dir: 'lib')
+   
 }
 
 jar {
@@ -26,6 +32,6 @@ verifyInstrumentation {
   // Verifier plugin documentation:
   // https://github.com/newrelic/newrelic-gradle-verify-instrumentation
   // Example:
-  // passes 'javax.servlet:servlet-api:[2.2,2.5]'
+  // passes 'com.adobe.granite:com.adobe.granite.acp.platform:[0.4.40,)'
   // exclude 'javax.servlet:servlet-api:2.4.public_draft'
 }

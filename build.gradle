@@ -157,6 +157,7 @@ subprojects {
   repositories {
     mavenLocal()
     mavenCentral()
+    flatDir dirs: 'lib'
   }
 
   apply plugin: 'java'
