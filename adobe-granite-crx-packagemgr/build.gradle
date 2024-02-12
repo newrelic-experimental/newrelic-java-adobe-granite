@@ -4,10 +4,7 @@
 apply plugin: 'java'
 
 dependencies {
-   implementation 'com.adobe.granite:com.adobe.granite.crx-packagemgr:1.2.140'
-   implementation 'org.apache.sling:org.apache.sling.jcr.jcr-wrapper:2.0.0'
-   implementation  'javax.servlet:javax.servlet-api:3.1.0'
-   implementation  'org.apache.jackrabbit.vault:org.apache.jackrabbit.vault:3.7.0'
+   implementation 'com.adobe.aem:uber-jar:6.5.6'
 
    // New Relic Java Agent dependencies
    implementation 'com.newrelic.agent.java:newrelic-agent:6.4.0'

@@ -1,23 +1,22 @@
 
-// Build.gradle generated for instrumentation module adobe-granite-acp-platform
+// Build.gradle generated for instrumentation module adobe-granite-contexthub-commons-impl
 
 apply plugin: 'java'
 
 dependencies {
    implementation 'com.adobe.aem:uber-jar:6.5.6'
-  
+
    // New Relic Java Agent dependencies
    implementation 'com.newrelic.agent.java:newrelic-agent:6.4.0'
    implementation 'com.newrelic.agent.java:newrelic-api:6.4.0'
+   implementation fileTree(include: ['*.jar'], dir: 'lib')
    implementation fileTree(include: ['*.jar'], dir: '../libs')
    implementation fileTree(include: ['*.jar'], dir: '../test-lib')
-   implementation fileTree(include: ['*.jar'], dir: 'lib')
-   
 }
 
 jar {
   manifest {
-    attributes 'Implementation-Title': 'com.newrelic.instrumentation.labs.adobe-granite-acp-platform'
+    attributes 'Implementation-Title': 'com.newrelic.instrumentation.labs.adobe-granite-contexthub-commons-impl'
     attributes 'Implementation-Vendor': 'New Relic Labs'
     attributes 'Implementation-Vendor-Id': 'com.newrelic.labs'
     attributes 'Implementation-Version': 1.0
@@ -28,6 +27,6 @@ verifyInstrumentation {
   // Verifier plugin documentation:
   // https://github.com/newrelic/newrelic-gradle-verify-instrumentation
   // Example:
-  // passes 'com.adobe.granite:com.adobe.granite.acp.platform:[0.4.40,)'
+  // passes 'javax.servlet:servlet-api:[2.2,2.5]'
   // exclude 'javax.servlet:servlet-api:2.4.public_draft'
 }

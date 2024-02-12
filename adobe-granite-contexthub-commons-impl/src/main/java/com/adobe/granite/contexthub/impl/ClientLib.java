@@ -4,8 +4,7 @@ import com.newrelic.api.agent.NewRelic;
 import com.newrelic.api.agent.Trace;
 import com.newrelic.api.agent.weaver.Weave;
 import com.newrelic.api.agent.weaver.Weaver;
-import com.newrelic.instrumentation.labs.adobe.granite.contexthub.commons.Util;
-
+import com.newrelic.instrumentation.labs.adobe.granite.contexthub.commons.impl.Util;
 import com.adobe.granite.ui.clientlibs.ClientLibrary;
 
 import java.util.HashMap;

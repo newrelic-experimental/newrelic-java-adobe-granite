@@ -115,9 +115,7 @@ task createModule {
         apply plugin: 'java'
 
         dependencies {
-           // Declare a dependency on each JAR you want to instrument
-           // Example:
-           // implementation 'javax.servlet:servlet-api:2.5'
+           implementation 'com.adobe.aem:uber-jar:6.5.6'
 
            // New Relic Java Agent dependencies
            implementation 'com.newrelic.agent.java:newrelic-agent:JAVA_AGENT_VERSION'
@@ -141,6 +139,10 @@ task createModule {
           // Example:
           // passes 'javax.servlet:servlet-api:[2.2,2.5]'
           // exclude 'javax.servlet:servlet-api:2.4.public_draft'
+          // passes 'com.adobe.aem:uber-jar:[6.4.0,)'
+          // exclude 'com.adobe.aem:uber-jar:[6.5.0,6.5.6)'
+          // exclude 'com.adobe.aem:uber-jar:[6.4.0,6.4.8.2]'
+
         }'''.replace('PROJECT_GROUP', projectGroup)
             .replace('PROJECT_NAME', projectName)
             .replace('PROJECT_PATH', projectPath.path)
