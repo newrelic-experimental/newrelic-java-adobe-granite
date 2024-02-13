@@ -1,0 +1,29 @@
+
+// Build.gradle generated for instrumentation module adobe-granite-rest
+
+apply plugin: 'java'
+
+dependencies {
+   implementation 'com.adobe.aem:uber-jar:6.5.6'
+
+   // New Relic Java Agent dependencies
+   implementation 'com.newrelic.agent.java:newrelic-agent:6.4.0'
+   implementation 'com.newrelic.agent.java:newrelic-api:6.4.0'
+   implementation fileTree(include: ['*.jar'], dir: '../libs')
+   implementation fileTree(include: ['*.jar'], dir: '../test-lib')
+}
+
+jar {
+  manifest {
+    attributes 'Implementation-Title': 'com.newrelic.instrumentation.labs.adobe-granite-rest'
+    attributes 'Implementation-Vendor': 'New Relic Labs'
+    attributes 'Implementation-Vendor-Id': 'com.newrelic.labs'
+    attributes 'Implementation-Version': 1.0
+  }
+}
+
+verifyInstrumentation {
+    passes 'com.adobe.aem:uber-jar:[6.4.0,)'
+    exclude 'com.adobe.aem:uber-jar:[6.5.0,6.5.6)'
+    exclude 'com.adobe.aem:uber-jar:[6.4.0,6.4.8.2]'
+}
