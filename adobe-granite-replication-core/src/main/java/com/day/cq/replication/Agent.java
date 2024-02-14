@@ -9,7 +9,7 @@ import com.newrelic.api.agent.weaver.Weaver;
 @Weave(type = MatchType.Interface)
 public abstract class Agent {
 
-	@Trace(dispatcher = true)
+	@Trace
 	public void replicate(final CompositeReplicationAction compositeReplicationAction,
 			ReplicationContent replicationContent, final ReplicationOptions replicationOptions) {
 
@@ -20,7 +20,7 @@ public abstract class Agent {
 
 	}
 
-	@Trace(dispatcher = true)
+	@Trace
 	public void replicate(ReplicationAction replicationAction, ReplicationContent replicationContent,
 			ReplicationOptions replicationOptions) {
 

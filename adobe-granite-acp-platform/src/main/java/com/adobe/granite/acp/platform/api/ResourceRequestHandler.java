@@ -16,7 +16,7 @@ import com.newrelic.instrumentation.labs.adobe.granite.acp.platform.Util;
 @Weave(type = MatchType.Interface)
 public abstract class ResourceRequestHandler {
 
-	@Trace(dispatcher = true)
+	@Trace
 	public ResourceResponse handleGet(ResourceRequest var1) {
 		ResourceResponse result;
 

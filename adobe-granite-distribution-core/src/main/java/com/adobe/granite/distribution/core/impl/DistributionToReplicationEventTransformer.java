@@ -14,7 +14,7 @@ import com.newrelic.instrumentation.labs.adobe.distribution.Util;
 @Weave
 public abstract class DistributionToReplicationEventTransformer {
 
-	@Trace(dispatcher = true)
+	@Trace
 	public void handleEvent(Event event) {
 
 		Map<String, Object> attributes = new HashMap<>();

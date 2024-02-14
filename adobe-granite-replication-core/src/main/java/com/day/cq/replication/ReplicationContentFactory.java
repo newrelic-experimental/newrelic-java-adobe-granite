@@ -14,7 +14,7 @@ import com.newrelic.instrumentation.labs.adobe.replication.Util;
 @Weave(type = MatchType.Interface)
 public abstract class ReplicationContentFactory {
 
-	@Trace(dispatcher = true)
+	@Trace
 	public ReplicationContent create(ReplicationContentFacade facade) {
 
 		NewRelic.getAgent().getTracedMethod()
@@ -23,7 +23,7 @@ public abstract class ReplicationContentFactory {
 		return Weaver.callOriginal();
 	}
 
-	@Trace(dispatcher = true)
+	@Trace
 	public ReplicationContent create(String mimeType, File file, boolean isTemp) {
 
 		Map<String, Object> attributes = new HashMap<>();
@@ -46,7 +46,7 @@ public abstract class ReplicationContentFactory {
 		return Weaver.callOriginal();
 	}
 
-	@Trace(dispatcher = true)
+	@Trace
 	public ReplicationContent create(String mimeType, File file, long lastModified, boolean isTemp) {
 
 		Map<String, Object> attributes = new HashMap<>();

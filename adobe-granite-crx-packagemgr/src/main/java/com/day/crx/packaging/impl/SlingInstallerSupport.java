@@ -1,16 +1,15 @@
 package com.day.crx.packaging.impl;
 
-import com.day.crx.packaging.impl.SlingInstallerSupport.Handle;
 import com.newrelic.api.agent.NewRelic;
 import com.newrelic.api.agent.Trace;
 import com.newrelic.api.agent.weaver.MatchType;
 import com.newrelic.api.agent.weaver.Weave;
 import com.newrelic.api.agent.weaver.Weaver;
 
-@Weave(originalName = "com.day.crx.packaging.impl.SlingInstallerSupport", type = MatchType.Interface)
-public abstract class SlingInstallerSupport_Instrumentation {
+@Weave(type = MatchType.Interface)
+public abstract class SlingInstallerSupport {
 
-	@Trace(dispatcher = true)
+	@Trace
 	public Handle pause() {
 
 		NewRelic.getAgent().getTracedMethod()
@@ -19,4 +18,9 @@ public abstract class SlingInstallerSupport_Instrumentation {
 		return Weaver.callOriginal();
 	}
 
+	@Weave(type = MatchType.Interface)
+	// Inner class has to be static
+	public static abstract class Handle {
+
+	}
 }

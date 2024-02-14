@@ -21,7 +21,7 @@ public abstract class QueryProcessor {
 	private QueryStatement queryStatement = Weaver.callOriginal();
 	private long resultCount = Weaver.callOriginal();
 
-	@Trace(dispatcher = true)
+	@Trace
 	public void queryAndGetResults(JSONArray children) {
 
 		Map<String, Object> attributes = new HashMap<>();
@@ -44,7 +44,7 @@ public abstract class QueryProcessor {
 
 	}
 
-	@Trace(dispatcher = true)
+	@Trace
 	public void queryDirAndAssetAndGetResults(JSONArray children) {
 
 		Map<String, Object> attributes = new HashMap<>();

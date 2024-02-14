@@ -17,7 +17,7 @@ import com.newrelic.instrumentation.labs.adobe.replication.Util;
 @Weave(type = MatchType.Interface)
 public abstract class ReplicationReceiver {
 
-	@Trace(dispatcher = true)
+	@Trace
 	public void receive(Session session, ReplicationAction action, InputStream in, long size, Writer writer) {
 		Map<String, Object> attributes = new HashMap<>();
 
@@ -36,7 +36,7 @@ public abstract class ReplicationReceiver {
 		Weaver.callOriginal();
 	}
 
-	@Trace(dispatcher = true)
+	@Trace
 	public void receive(Session session, ReplicationAction action, InputStream in, long size, Writer writer,
 			boolean install) {
 		Map<String, Object> attributes = new HashMap<>();
@@ -56,7 +56,7 @@ public abstract class ReplicationReceiver {
 		Weaver.callOriginal();
 	}
 
-	@Trace(dispatcher = true)
+	@Trace
 	public void receive(Session session, final ReplicationAction action, InputStream in, long size, Writer writer,
 			boolean install, boolean binaryLess) {
 

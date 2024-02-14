@@ -13,7 +13,7 @@ import com.newrelic.api.agent.weaver.Weaver;
 @Weave(type = MatchType.Interface)
 public abstract class ContentBuilder {
 
-	@Trace(dispatcher = true)
+	@Trace
 	public ReplicationContent create(Session session, ReplicationAction action,
 			ReplicationContentFactory contentFactory) {
 
@@ -23,7 +23,7 @@ public abstract class ContentBuilder {
 		return Weaver.callOriginal();
 	}
 
-	@Trace(dispatcher = true)
+	@Trace
 	public ReplicationContent create(Session session, ReplicationAction action,
 			ReplicationContentFactory contentFactory, Map<String, Object> parameters) {
 

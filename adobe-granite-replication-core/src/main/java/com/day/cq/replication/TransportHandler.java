@@ -13,7 +13,7 @@ import com.newrelic.instrumentation.labs.adobe.replication.Util;
 @Weave(type = MatchType.Interface)
 public abstract class TransportHandler {
 
-	@Trace(dispatcher = true)
+	@Trace
 	public ReplicationResult deliver(TransportContext ctx, ReplicationTransaction tx) {
 
 		Map<String, Object> attributes = new HashMap<>();

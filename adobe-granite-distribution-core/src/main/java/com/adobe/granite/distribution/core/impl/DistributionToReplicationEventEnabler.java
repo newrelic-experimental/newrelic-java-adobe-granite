@@ -16,7 +16,7 @@ import com.newrelic.instrumentation.labs.adobe.distribution.Util;
 @Weave
 public abstract class DistributionToReplicationEventEnabler {
 
-	@Trace(dispatcher = true)
+	@Trace
 	public void process(SlingHttpServletRequest request, List<Modification> modifications) {
 
 		Map<String, Object> attributes = new HashMap<>();

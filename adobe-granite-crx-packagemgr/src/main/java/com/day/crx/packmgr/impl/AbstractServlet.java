@@ -17,7 +17,7 @@ import com.newrelic.instrumentation.labs.adobe.granite.crx.packagemgr.Util;
 @Weave(type = MatchType.BaseClass)
 public abstract class AbstractServlet {
 
-	@Trace(dispatcher = true)
+	@Trace
 	protected void doService(HttpServletRequest httpRequest, HttpServletResponse httpResponse, Session session) {
 
 		Map<String, Object> attributes = new HashMap<>();

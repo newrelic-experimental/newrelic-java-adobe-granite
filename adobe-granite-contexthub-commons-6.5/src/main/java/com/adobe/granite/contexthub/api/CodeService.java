@@ -13,7 +13,7 @@ import com.newrelic.instrumentation.labs.adobe.granite.contexthub.commons.Util;
 @Weave(type = MatchType.Interface)
 public abstract class CodeService {
 
-	@Trace(dispatcher = true)
+	@Trace
 	public String getKernelCode(SlingHttpServletRequest request, SlingHttpServletResponse response) {
 
 		String result;
@@ -29,7 +29,7 @@ public abstract class CodeService {
 
 		return result;
 	}
-	@Trace(dispatcher = true)
+	@Trace
 	public String getUICode(SlingHttpServletRequest request, SlingHttpServletResponse response) {
 
 		String result;
@@ -46,7 +46,7 @@ public abstract class CodeService {
 		return result;
 	}
 	
-	@Trace(dispatcher = true)
+	@Trace
 	public String getKernelCodeETag(SlingHttpServletRequest request, SlingHttpServletResponse response) {
 
 		String result;

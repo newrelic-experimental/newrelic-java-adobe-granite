@@ -14,7 +14,7 @@ import java.util.Map;
 @Weave
 public abstract class ClientLib {
 
-	@Trace(dispatcher = true)
+	@Trace
 	public String getContent(ClientLibrary clientLibrary) {
 		String result;
 		Map<String, Object> attributes = new HashMap<>();

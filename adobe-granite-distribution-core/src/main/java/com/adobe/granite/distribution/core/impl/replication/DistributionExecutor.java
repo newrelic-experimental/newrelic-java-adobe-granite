@@ -16,7 +16,7 @@ import com.newrelic.instrumentation.labs.adobe.distribution.Util;
 @Weave(type = MatchType.Interface)
 public abstract class DistributionExecutor {
 
-	@Trace(dispatcher = true)
+	@Trace
 	public void distribute(DistributionRequest request, ResourceResolver resourceResolver) {
 
 		Map<String, Object> attributes = new HashMap<>();
