@@ -24,6 +24,7 @@ jar {
 }
 
 verifyInstrumentation {
-  passes 'com.adobe.aem:uber-jar:[6.5.0,)'
-  exclude 'com.adobe.aem:uber-jar:[6.5.0,6.5.6)'
+    passes 'com.adobe.aem:uber-jar:[6.4.0,)'
+    exclude 'com.adobe.aem:uber-jar:[6.5.0,6.5.6)'
+    exclude 'com.adobe.aem:uber-jar:[6.4.0,6.4.8.5)'
 }
