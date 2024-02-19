@@ -1,0 +1,2 @@
+// To compile, find the appropriate jar file in your AEM installation with this name where xxxxx is the version number you are using
+com.adobe.granite.eventing.api-xxxx.jar

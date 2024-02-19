@@ -11,7 +11,7 @@ import com.newrelic.api.agent.weaver.Weaver;
 import com.newrelic.instrumentation.labs.adobe.granite.asset.api.Util;
 
 @Weave(type = MatchType.Interface)
-public class AssetManager {
+public abstract class AssetManager {
 
 	@Trace
 	public Asset createAsset(String path) {
