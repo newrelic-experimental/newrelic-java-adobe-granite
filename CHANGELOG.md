@@ -1,9 +1,9 @@
 ## Version: [v1.0.0](https://github.com/newrelic-experimental/newrelic-java-adobe-granite/releases/tag/v1.0.0) | Created: 2024-02-28
 ### Enhancements
-- Added Instrumnetation for Adobe Granite ACP Plattform
-- Added Instrumnetation for Adobe Granite crx packagemgr module
-- Added Instrumnetation for Adobe Granite distribution core module
-- Added Instrumnetation for Adobe Granite replication core module
+- Added Instrumentation for Adobe Granite ACP Plattform
+- Added Instrumentation for Adobe Granite crx packagemgr module
+- Added Instrumentation for Adobe Granite distribution core module
+- Added Instrumentation for Adobe Granite replication core module
 - Added Instrumentation for Adobe Granite httpcache  module
 - Added Instrumentation for Adobe Granite workflow api  module
 - Added Instrumentation for Adobe Granite asset api  module
