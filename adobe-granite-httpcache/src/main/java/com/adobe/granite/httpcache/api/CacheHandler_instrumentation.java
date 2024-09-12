@@ -13,7 +13,7 @@ import com.newrelic.api.agent.weaver.Weave;
 import com.newrelic.api.agent.weaver.Weaver;
 import com.newrelic.instrumentation.labs.adobe.granite.httpcache.api.Util;
 
-@Weave(originalName = "com.adobe.granite.httpcache.api.CacheFile", type = MatchType.Interface)
+@Weave(originalName = "com.adobe.granite.httpcache.api.CacheHandler", type = MatchType.Interface)
 public class CacheHandler_instrumentation {
 
 	@Trace
