@@ -7,10 +7,9 @@ dependencies {
    implementation 'com.adobe.aem:uber-jar:6.5.6'
 
    // New Relic Java Agent dependencies
-   implementation 'com.newrelic.agent.java:newrelic-agent:6.4.0'
-   implementation 'com.newrelic.agent.java:newrelic-api:6.4.0'
+   implementation 'com.newrelic.agent.java:newrelic-agent:8.4.0'
+   implementation 'com.newrelic.agent.java:newrelic-api:8.4.0'
    implementation fileTree(include: ['*.jar'], dir: 'lib')
-   implementation fileTree(include: ['*.jar'], dir: '../libs')
    implementation fileTree(include: ['*.jar'], dir: '../test-lib')
 }
 
@@ -24,9 +23,4 @@ jar {
 }
 
 verifyInstrumentation {
-  // Verifier plugin documentation:
-  // https://github.com/newrelic/newrelic-gradle-verify-instrumentation
-  // Example:
-  // passes 'javax.servlet:servlet-api:[2.2,2.5]'
-  // exclude 'javax.servlet:servlet-api:2.4.public_draft'
 }
