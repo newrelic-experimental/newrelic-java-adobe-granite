@@ -1,4 +1,4 @@
-rootProject.name = 'java-instrumentation-template'
+rootProject.name = 'adobe-granite-instrumentation'
 include 'adobe-granite-acp-platform'
 include 'adobe-granite-contexthub-commons-6.5'
 include 'adobe-granite-crx-packagemgr'
