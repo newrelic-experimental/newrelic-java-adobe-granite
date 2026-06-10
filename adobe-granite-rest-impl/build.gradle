@@ -9,8 +9,9 @@ dependencies {
    
 
    // New Relic Java Agent dependencies
-   implementation 'com.newrelic.agent.java:newrelic-agent:8.4.0'
-   implementation 'com.newrelic.agent.java:newrelic-api:8.4.0'
+   implementation 'com.newrelic.agent.java:newrelic-agent:' + project.findProperty('java.agent.version')
+   implementation 'com.newrelic.agent.java:newrelic-api:' + project.findProperty('java.agent.version')
+   implementation 'com.newrelic.agent.java:agent-bridge:' + project.findProperty('java.agent.version')
    implementation fileTree(include: ['*.jar'], dir: '../test-lib')
 }
 
@@ -24,7 +25,7 @@ jar {
 }
 
 verifyInstrumentation {
-    passes ('com.adobe.granite:com.adobe.granite.rest.api:[1.0.0,)') {
-    	compile ('com.adobe.aem:uber-jar:6.5.6')
+    passesOnly ('com.adobe.granite:com.adobe.granite.rest.api:[1.0.0,)') {
+    	implementation ('com.adobe.aem:uber-jar:6.5.6')
     	}
 }
